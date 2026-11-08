@@ -30,8 +30,6 @@ Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
 ### Fixed
 - Tables that are not square (injector dead time, cranking base fuel, …) were drawn with rows
   and columns swapped
-
-### Fixed
 - Closing the window now disconnects first, as the Disconnect button does: the running data log
   (over 30 s) is saved, the CAN console is turned off and the serial port is closed. Before, the
   log was lost when the app was closed while connected.
