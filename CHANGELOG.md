@@ -15,6 +15,21 @@ Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
 - The Logger tab's live chart can be turned off with **Graph on/off** to save CPU; recording
   goes on and opened log files are still drawn (on the test laptop: about 62 % → 15 % of one
   CPU core)
+- Live data defaults to 50 reads per second and never goes above 100, so the ECU stays light
+  (about 6 % of its CPU at 100/s, a third of it when read as fast as possible); 200 and "Max"
+  from older settings become 100
+- Tables use calmer colours with smaller steps between values; curves are plain rows
+- Table axes are named as the firmware names them, with units (e.g. Battery (volts),
+  Pressure (kPa))
+- Menu pages whose feature is turned off are hidden until it is turned on
+- Fuel pressure sensor is under Inputs › Sensors; Trailing ignition (rotary) moved to Expert
+- Menus follow layout updates for firmware of every date, not only the newest
+- The status bar shows when VE autotune is running
+- ECU command buttons (e.g. the trigger stimulator) say they need "Allow writes"
+
+### Fixed
+- Tables that are not square (injector dead time, cranking base fuel, …) were drawn with rows
+  and columns swapped
 
 ### Fixed
 - Closing the window now disconnects first, as the Disconnect button does: the running data log
