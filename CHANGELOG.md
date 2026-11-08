@@ -9,9 +9,13 @@ Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
 - The status bar shows when the trigger logger, trigger sniffer, trigger scope or VE autotune is
   running, and the app asks before you leave a running trigger tool
 - Works with official rusEFI and other rusEFI-based firmware too, with their own page names
+- Project files (.mdt) now carry the ECU definition, so they open on any PC without internet
+- The installer also installs the USB driver needed for firmware updates (once, if missing)
 
 ### Improved
-- The app stays smoother during live data, especially on pages with large tables
+- The app stays smoother during live data, especially on pages with large tables, and asks the
+  ECU only for the values on screen, so both work less
+- Menus and pages respond faster
 - Calmer table colours that are easier on the eyes
 - Table axes show their real names and units
 - Pages for features that are turned off are hidden until you turn the feature on
