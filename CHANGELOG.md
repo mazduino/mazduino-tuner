@@ -2,6 +2,19 @@
 
 Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
 
+## Unreleased
+
+### Changed
+- English is the default interface language; Indonesian stays available in Settings, and a
+  language already chosen is kept
+- The Start page shows the board, port and firmware only, without the paths of the ECU
+  definition files
+
+### Fixed
+- Closing the window now disconnects first, as the Disconnect button does: the running data log
+  (over 30 s) is saved, the CAN console is turned off and the serial port is closed. Before, the
+  log was lost when the app was closed while connected.
+
 ## 0.1.0-alpha.1 — 2026-11-08
 
 First public test build.
