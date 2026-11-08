@@ -9,6 +9,12 @@ Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
   language already chosen is kept
 - The Start page shows the board, port and firmware only, without the paths of the ECU
   definition files
+- Trigger sniffer starts only when you press Start, and drops data the ECU recorded before that
+- While the trigger logger, trigger sniffer or trigger scope runs, the status bar shows it, and
+  opening another page asks first: leaving stops it
+- The Logger tab's live chart can be turned off with **Graph on/off** to save CPU; recording
+  goes on and opened log files are still drawn (on the test laptop: about 62 % → 15 % of one
+  CPU core)
 
 ### Fixed
 - Closing the window now disconnects first, as the Disconnect button does: the running data log
