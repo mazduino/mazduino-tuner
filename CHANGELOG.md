@@ -4,35 +4,26 @@ Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
 
 ## Unreleased
 
-### Changed
-- English is the default interface language; Indonesian stays available in Settings, and a
-  language already chosen is kept
-- The Start page shows the board, port and firmware only, without the paths of the ECU
-  definition files
-- Trigger sniffer starts only when you press Start, and drops data the ECU recorded before that
-- While the trigger logger, trigger sniffer or trigger scope runs, the status bar shows it, and
-  opening another page asks first: leaving stops it
-- The Logger tab's live chart can be turned off with **Graph on/off** to save CPU; recording
-  goes on and opened log files are still drawn (on the test laptop: about 62 % → 15 % of one
-  CPU core)
-- Live data defaults to 50 reads per second and never goes above 100, so the ECU stays light
-  (about 6 % of its CPU at 100/s, a third of it when read as fast as possible); 200 and "Max"
-  from older settings become 100
-- Tables use calmer colours with smaller steps between values; curves are plain rows
-- Table axes are named as the firmware names them, with units (e.g. Battery (volts),
-  Pressure (kPa))
-- Menu pages whose feature is turned off are hidden until it is turned on
-- Fuel pressure sensor is under Inputs › Sensors; Trailing ignition (rotary) moved to Expert
-- Menus follow layout updates for firmware of every date, not only the newest
-- The status bar shows when VE autotune is running
-- ECU command buttons (e.g. the trigger stimulator) say they need "Allow writes"
+### New
+- Turn the Logger graph off with **Graph off** to keep the app light; recording carries on
+- The status bar shows when the trigger logger, trigger sniffer, trigger scope or VE autotune is
+  running, and the app asks before you leave a running trigger tool
+- Works with official rusEFI and other rusEFI-based firmware too, with their own page names
+
+### Improved
+- The app stays smoother during live data, especially on pages with large tables
+- Calmer table colours that are easier on the eyes
+- Table axes show their real names and units
+- Pages for features that are turned off are hidden until you turn the feature on
+- Fuel pressure sensor is now under Inputs › Sensors
+- Menus stay up to date for every firmware version
+- English is the default language (Indonesian is in Settings)
+- Trigger sniffer starts when you press Start
 
 ### Fixed
-- Tables that are not square (injector dead time, cranking base fuel, …) were drawn with rows
-  and columns swapped
-- Closing the window now disconnects first, as the Disconnect button does: the running data log
-  (over 30 s) is saved, the CAN console is turned off and the serial port is closed. Before, the
-  log was lost when the app was closed while connected.
+- Some tables (injector dead time, cranking fuel) were shown the wrong way round
+- Closing the app while connected could lose the data log
+- After a firmware update the app sometimes could not reconnect
 
 ## 0.1.0-alpha.1 — 2026-11-08
 
