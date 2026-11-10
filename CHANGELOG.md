@@ -2,7 +2,9 @@
 
 Versions follow `major.minor.patch`; `-alpha.N` and `-beta.N` are test builds.
 
-## Unreleased
+## 0.1.0-alpha.2 — 2026-11-11
+
+Works until 11 December 2026; the app tells you when a newer version is out.
 
 ### New
 - The app knows each ECU. If you open a project and connect to a different ECU (for example
